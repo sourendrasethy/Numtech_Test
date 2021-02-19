@@ -1,0 +1,232 @@
+@charset "UTF-8";
+@import url("https://fonts.googleapis.com/css2?family=Rubik:wght@400;700&display=swap");
+* {
+  box-sizing: border-box;
+}
+
+.sr-only {
+  visibility: hidden;
+}
+
+.hidden {
+  width: 0;
+  height: 0;
+  visibility: hidden;
+  display: none;
+  overflow: hidden;
+}
+
+html {
+  font-size: 16px;
+}
+
+body {
+  display: flex;
+  padding: 0;
+  margin: 0;
+  align-items: center;
+  flex-direction: column;
+  min-height: 100vh;
+  font-family: "Rubik", sans-serif;
+  position: relative;
+  background-color: #fbfcfc;
+  background-image: url("https://source.unsplash.com/UgmrwjKMhJM/1920x1080");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.challenge-title {
+  text-align: center;
+  padding: 0;
+  margin: 1rem 0 0.5rem;
+  color: #0d1117;
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+.challenge-subtitle {
+  text-align: center;
+  margin: 0;
+  font-size: 1.125rem;
+  color: black;
+  margin-bottom: 2rem;
+}
+
+.login-card {
+  margin: auto;
+  width: 600px;
+  min-height: 500px;
+  background: #34bc9d;
+  display: flex;
+  align-items: stretch;
+  border-radius: 0.5rem;
+  overflow: hidden;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 15px -3px, rgba(0, 0, 0, 0.05) 0px 4px 6px -2px;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+}
+
+.login-glass {
+  flex: 0 0 40%;
+  background-color: rgba(255, 255, 255, 0.35);
+  -webkit-backdrop-filter: blur(5px);
+  backdrop-filter: blur(5px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.login-glass svg {
+  width: 30%;
+  fill: white;
+}
+
+.login-form-container {
+  flex: 0 0 60%;
+  margin: 35px auto;
+  display: flex;
+  flex-direction: column;
+  padding: 2rem;
+  background-color: #222430;
+  box-shadow: 0 4px 8px 0 rgb(0 0 0 / 20%), 0 6px 20px 0 rgb(0 0 0 / 19%);
+  height: 430px;
+}
+.login-form-container .login-title {
+  font-size: 28px;
+  font-weight: bold;
+  text-align: center;
+  padding: 0 0 2rem;
+}
+.login-form-container .form-control {
+  display: flex;
+  align-items: center;
+  position: relative;
+  width: 100%;
+}
+.login-form-container .form-control:not(:last-of-type) {
+  margin-bottom: 2.8rem;
+}
+.login-form-container .form-control > label {
+  position: absolute;
+  font-weight: bold;
+  color: #4d555f;
+  font-size: 0.875rem;
+  top: -16px;
+  left: -0.25rem;
+  transform: translateY(-50%);
+  color: white;
+  padding: 0 0.25rem;
+}
+.login-form-container .form-control > input {
+  flex: 1 0 auto;
+  padding: 8px;
+  border-radius: 3px;
+  border: 1px solid #d1d5da;
+  transition: border-color 0.2s ease;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 3px 0px, rgba(0, 0, 0, 0.06) 0px 1px 2px 0px;
+}
+.login-form-container .form-control > input:hover {
+  border-color: #e56b6f;
+}
+.login-form-container .form-control > input:focus {
+  outline: 0;
+  border-color: #e56b6f;
+}
+ .form-forgot {
+  flex: 1 0 50%;
+  display: flex;
+  align-items: center;
+}
+.login-form-container .form-control .form-remember label {
+  cursor: pointer;
+  color: #7c8896;
+  transition: color 0.2s ease;
+  padding-left: 0.5rem;
+  position: relative;
+}
+.login-form-container .form-control .form-remember label:hover {
+  color: #0d1117;
+}
+.login-form-container .form-control .form-remember label::before {
+  content: "";
+  position: absolute;
+  font-family: "Font Awesome 5 Free";
+  top: 50%;
+  transform: translateY(-50%);
+  left: -0.875rem;
+  color: #7c8896;
+}
+.login-form-container .form-control .form-remember input:hover + label {
+  color: #0d1117;
+}
+.login-form-container .form-control .form-remember input:checked + label::before {
+  content: "";
+}
+.login-form-container .form-control .form-remember input {
+  cursor: pointer;
+  margin: 0;
+  opacity: 0;
+}
+.form-forgot {
+  justify-content: center;
+  margin: 50px auto;
+  color: white;
+}
+.form-forgot a,
+ .form-forgot a:focus {
+  color: #ffffff;
+  font-size: 0.875rem;
+  font-weight: bold;
+  text-decoration: none;
+}
+.login-form-container .form-control .form-forgot a:hover, .login-form-container .form-control .form-forgot a:active,
+.login-form-container .form-control .form-forgot a:focus:hover,
+.login-form-container .form-control .form-forgot a:focus:active {
+  text-decoration: underline;
+}
+
+.btn {
+  display: flex;
+  align-items: center;
+  background-color: #f44336;
+  border: 0;
+  color: white;
+  padding: 8px;
+  font-size: 1rem;
+  border-radius: 0.25rem;
+  transition: background-color 0.1s ease-in;
+  cursor: pointer;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 3px 0px, rgba(0, 0, 0, 0.06) 0px 1px 2px 0px;
+}
+.btn:hover {
+  background-color: #e98184;
+}
+.btn:active {
+  background-color: #e1555a;
+}
+.btn:focus {
+  outline: 1px dotted #c72328;
+}
+.btn.btn-full {
+  flex: 1 0 auto;
+  font-weight: bold;
+  font-size: 0.875rem;
+  justify-content: center;
+}
+.btn.btn-default {
+  background-color: white;
+  color: #98a1ad;
+  border-color: #d1d5da;
+}
+.btn.btn-default:hover {
+  background-color: #f1f2f4;
+}
+.btn.btn-default:active {
+  background-color: #e3e5e8;
+}
+.cstm-mb {
+  margin-bottom: 1.5rem !important;
+}
+.error{
+  color: red;
+  position: absolute;
+  top: 33px;
+}
